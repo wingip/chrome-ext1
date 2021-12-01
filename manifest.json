@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "aem extension",
+    "version": "0.1",
+    "description": "aem extension by w2g",
+    "icons": {
+        "128": "img/128.png"
+    },
+    "action": {
+        "default_icon": "img/128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://kenwheeler.github.io/*"
+            ],
+            "css": [
+                "my-styles.css"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "contextMenus"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
